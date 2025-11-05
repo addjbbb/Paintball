@@ -10,39 +10,39 @@ import { Difficulty, LevelParams } from '../types';
  */
 export const DIFFICULTY_CONFIGS: Record<Difficulty, Partial<LevelParams>> = {
   facile: {
-    discRadius: 80,
-    numDiscs: 3,
-    numRedPoints: 15,
-    numGreenPoints: 8,
-    safetyMargin: 20,
-    minDiscDistance: 100,
+    discRadius: 70,        // ⬇️ Réduit de 80 → 70
+    numDiscs: 4,           // ⬆️ Augmenté de 3 → 4
+    numRedPoints: 20,      // ⬆️ Augmenté de 15 → 20
+    numGreenPoints: 12,    // ⬆️ Augmenté de 8 → 12
+    safetyMargin: 15,      // ⬇️ Réduit de 20 → 15
+    minDiscDistance: 80,   // ⬇️ Réduit de 100 → 80
     difficulty: 'facile'
   },
   debutant: {
-    discRadius: 70,
-    numDiscs: 4,
-    numRedPoints: 20,
-    numGreenPoints: 12,
-    safetyMargin: 15,
-    minDiscDistance: 80,
+    discRadius: 60,        // ⬇️ Réduit de 70 → 60
+    numDiscs: 5,           // ⬆️ Augmenté de 4 → 5
+    numRedPoints: 28,      // ⬆️ Augmenté de 20 → 28
+    numGreenPoints: 18,    // ⬆️ Augmenté de 12 → 18
+    safetyMargin: 10,      // ⬇️ Réduit de 15 → 10
+    minDiscDistance: 60,   // ⬇️ Réduit de 80 → 60
     difficulty: 'debutant'
   },
   intermediaire: {
-    discRadius: 60,
-    numDiscs: 5,
-    numRedPoints: 25,
-    numGreenPoints: 18,
-    safetyMargin: 10,
-    minDiscDistance: 60,
+    discRadius: 50,        // ⬇️ Réduit de 60 → 50
+    numDiscs: 6,           // ⬆️ Augmenté de 5 → 6
+    numRedPoints: 35,      // ⬆️ Augmenté de 25 → 35
+    numGreenPoints: 28,    // ⬆️ Augmenté de 18 → 28
+    safetyMargin: 7,       // ⬇️ Réduit de 10 → 7
+    minDiscDistance: 50,   // ⬇️ Réduit de 60 → 50
     difficulty: 'intermediaire'
   },
   difficile: {
-    discRadius: 50,
-    numDiscs: 6,
-    numRedPoints: 30,
-    numGreenPoints: 25,
-    safetyMargin: 5,
-    minDiscDistance: 50,
+    discRadius: 45,        // ⬇️ Réduit de 50 → 45 (DISQUES TRÈS PETITS!)
+    numDiscs: 7,           // ⬆️ Augmenté de 6 → 7
+    numRedPoints: 45,      // ⬆️ Augmenté de 30 → 45
+    numGreenPoints: 35,    // ⬆️ Augmenté de 25 → 35
+    safetyMargin: 3,       // ⬇️ Réduit de 5 → 3 (TRÈS PEU DE MARGE!)
+    minDiscDistance: 40,   // ⬇️ Réduit de 50 → 40
     difficulty: 'difficile'
   }
 };
