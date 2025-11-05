@@ -5,6 +5,9 @@
 
 import { UserProfile, LevelStats } from '../types';
 
+// MODE DEBUG: Mettre à true pour débloquer tous les niveaux
+const DEBUG_UNLOCK_ALL_LEVELS = true;
+
 const STORAGE_KEYS = {
   CURRENT_USER: 'paintball_current_user',
   PROFILES: 'paintball_profiles'
@@ -120,6 +123,11 @@ export function getLastUnlockedLevel(username: string): number {
  * Retourne tous les niveaux débloqués
  */
 export function getUnlockedLevels(username: string): number[] {
+  // MODE DEBUG: Débloquer tous les niveaux
+  if (DEBUG_UNLOCK_ALL_LEVELS) {
+    return Array.from({ length: 50 }, (_, i) => i + 1);
+  }
+
   const profile = getUserProfile(username);
   const unlocked: number[] = [1]; // Niveau 1 toujours débloqué
 
