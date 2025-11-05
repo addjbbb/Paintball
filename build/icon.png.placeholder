@@ -1,0 +1,16 @@
+# Placeholder pour icon.png
+
+Pour générer l'icône, vous pouvez utiliser le favicon.svg dans public/
+et le convertir en PNG 512x512 avec un outil comme Inkscape ou en ligne.
+
+Commande Inkscape (si installé) :
+```bash
+inkscape public/favicon.svg --export-filename=build/icon.png --export-width=512 --export-height=512
+```
+
+Ou utiliser un service en ligne :
+- https://cloudconvert.com/svg-to-png
+- Upload public/favicon.svg
+- Définir 512x512
+- Télécharger et renommer en icon.png
+- Placer dans ce dossier (build/)
